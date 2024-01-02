@@ -4,6 +4,9 @@ const port = 3000
 const studentModel=require('./student');
 
 
+app.get('/', (req, res) => {
+  res.send('hellow world')
+  });
 app.get('/allstudents',async (req, res) => {
     try {
       const allStudents = await studentModel.find({});
